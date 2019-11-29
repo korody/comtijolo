@@ -84,6 +84,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'redcarpet'
 
+gem 'sanitize'
+
 # group :production do
   # gem 'rails_12factor'
 # end
