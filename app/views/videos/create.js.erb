@@ -1,0 +1,21 @@
+var $video_form = $('.button-collapse.colapsed'), 
+    $video = $video_form.prev('.btn.active'); 
+
+<% if @video.valid? %>
+  $video_form.toggle(800);
+  $video_form.hide(800).html("<%= j render 'videos/form', filmable: @post %>");
+  $video.button('complete');
+  $video.toggleClass('active')
+  $(".videos-list .col-lg-12:last-child").before("<%= j render 'gallery_video', video: @video %>");
+  var form  = $('*[data-filmable="<%= @video.filmable_type %>"]'),
+      field = form.find('.filmable_video_ids');
+
+  var array = field.val().split(',').filter(function (v) {
+    return !isNaN(parseInt(v));
+  });
+  array.push('<%= @video.id %>');
+
+  field.val(array.join(','));
+<% else %>
+  $form.html("<%= j render 'videos/form', filmable: @post %>");
+<% end %>

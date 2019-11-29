@@ -1,0 +1,4 @@
+article
+  h4 posts recentes
+  ul.media-list
+    = render partial: 'post_summary', collection: @recent_posts, as: :post

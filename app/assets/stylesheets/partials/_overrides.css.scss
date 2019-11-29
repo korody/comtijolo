@@ -1,0 +1,46 @@
+$font-family-serif:       "Lora", serif;
+$font-family-sans-serif:  "Quattrocento Sans", sans-serif;
+
+$font-family-base: $font-family-serif;
+$headings-font-family: $font-family-sans-serif;
+
+$link-color: $comtijolo;
+
+$nav-pills-border-radius: 0;
+$nav-pills-active-link-hover-bg: white;
+$nav-pills-active-link-hover-color: $comtijolo;
+
+$pagination-hover-color: $comtijolo;
+$pagination-bg: transparent;
+$pagination-hover-bg: white;
+$pagination-border: white;
+$pagination-hover-border: #DDD;
+$pagination-active-border: $comtijolo-light;
+$pagination-disabled-border: $comtijolo-light;
+$pagination-active-color: $comtijolo;
+$pagination-active-bg: white;
+
+p {
+  color: $text;
+}
+
+ul {
+  margin: 0;
+  
+  li {
+    list-style-type: none;
+  }
+}
+
+a, .btn.btn-default {
+  color: $comtijolo;
+
+  &:hover, &:focus {
+    color: $text;
+    text-decoration: none !important;
+  }
+}
+
+.fa {
+  padding-right: 4px;
+}

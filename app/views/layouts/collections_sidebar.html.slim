@@ -1,0 +1,7 @@
+= content_for :sidebar do
+  article
+    h4 tags nesta série
+    ul.nav.nav-pills
+      = render @tags
+  
+= render file: 'layouts/application'

@@ -1,0 +1,8 @@
+= form_for Attachment.new do |attachment|
+  = attachment.hidden_field :attachable_type, value: attachable.class.name
+  .form-group
+    = attachment.label :attachments, class: 'sr-only'
+    .file-input-wrapper
+      .custom-file-field
+        span #{content_tag :span, "selecione arquivos", class: 'file-input-link'} ou arraste os mesmos para esta tela.
+      = attachment.file_field :file, multiple: true, name: "attachment[file]", class: 'browser-file-field'

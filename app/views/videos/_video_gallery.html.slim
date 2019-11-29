@@ -1,0 +1,5 @@
+.videos-list.clearfix
+  .row
+    - object.videos.each do |video|
+      = render 'videos/gallery_video', video: video
+    .col.col-lg-12

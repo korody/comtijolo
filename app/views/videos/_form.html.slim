@@ -1,0 +1,8 @@
+= form_for Video.new, remote: true do |video|
+  = video.hidden_field :filmable_type, value: filmable.class.name
+  = video.label :link, class: 'sr-only'
+  = video.text_field :link, class: 'form-control input-lg', placeholder: "video"
+  = video.label :note, class: 'sr-only'
+  = video.text_area :note, class: 'form-control input-lg', rows: 2, placeholder: "descrição do video"
+  button type='submit button' class= 'btn btn-lg btn-default btn-block btn-default' id= 'create-video' data-loading-text= "adicionando..." data-complete-text="mensagem enviada : )" autocomplete='off'
+    | pronto

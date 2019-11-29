@@ -1,0 +1,21 @@
+- set_meta_tags site: "comTijolo", title: @post.name, description: @post.description, keywords: @post.tags.pluck(:name).join(' '), og: { title: "#{@post.name} | blog comTijolo", description: @post.description, image: "#{@post.attachments.map { |a| a.file_url }.join('')}" }
+
+.posts-index
+  = render @post
+
+- if @post.collections.any?
+  .post-further-readings
+    = render partial: 'posts/collection', collection: @post.collections
+
+- if @post.complements.any?
+  .post-further-readings
+    article
+      h4 leitura complementar
+      ul.media-list
+        = render partial: 'post_summary', collection: @post.complements, as: :post
+
+.post-comments
+  = render 'layouts/disqus'
+
+.element-controls
+  = render 'layouts/object_controls', object: @post
