@@ -67,7 +67,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
 gem 'slim-rails'
-gem 'bootstrap-sass', '~> 3.3.1'
+gem 'bootstrap-sass', '~> 3.3.7'
 
 gem 'font-awesome-rails'
 
