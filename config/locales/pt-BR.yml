@@ -215,6 +215,7 @@ pt-BR:
       monthly: ! '%b%y'
       monthly_long: ! '%B de %Y'
       date_month: ! '%d%b'
+      date_month_year: ! '%d%b%y'
     pm: ''
 
   will_paginate:

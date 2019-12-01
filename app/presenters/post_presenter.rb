@@ -20,7 +20,7 @@ class PostPresenter < BasePresenter
   end
 
   def creation
-    h.l post.created_at, format: :date_month
+    h.l post.created_at, format: :date_month_year
   end
 
   def author
